@@ -8,11 +8,15 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
   end
 
+  # 投稿作成
   def create
     @post = Post.new(
       user_id: @current_user.id,
       content: params[:content],
-      title: params[:title]
+      title: params[:title],
+      address: "aiueo",
+      latitude: "aiueo",
+      longitude: "aiueo"
       # 住所も追加する（address,latitude,longitude）
     )
     

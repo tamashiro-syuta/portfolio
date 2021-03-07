@@ -31,7 +31,7 @@
                 </button>
               </li>
               <li class="nav-item">
-                <button type="button" class="btn btn-orange mx-auto d-block" id="btn-signup">投稿</button>
+                <button type="button" class="btn btn-orange mx-auto d-block" id="btn-post">投稿</button>
               </li>
             <% else %>
               <%# セッションがないと使える機能 %>
@@ -51,6 +51,13 @@
         </div>
       </nav>
     </header><!-- End Header -->
+
+    <%# flashの表示 %>
+    <% if flash[:notice] %>
+      <div class="flash py-3 mx-auto">
+        <h1 class="text-center"><%= flash[:notice] %></h1>
+      </div>
+    <% end %>
 
     <!-- モーダル -->
         <!--  サインアップモーダル -->

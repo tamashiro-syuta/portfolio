@@ -19,10 +19,16 @@ document.addEventListener("turbolinks:load"
                 console.log("a");
             });
 
+            $("#btn-post").click(function () {
+                $("#post-modal").fadeIn();
+                console.log("b");
+            });
+
             $(".close-modal").click(function () {
                 $("#signup-modal").fadeOut();
                 $("#login-modal").fadeOut();
                 $("#search-modal").fadeOut();
+                $("#post-modal").fadeOut();
                 console.log("c");
             });
 

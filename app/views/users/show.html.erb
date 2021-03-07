@@ -1,0 +1,46 @@
+<div>
+            
+    <main>
+        <%= flash[:notice] %>
+        <div class="name_and_icon py-5">
+            <div class="float-left ml-3">
+                <img src="<%= "/user_images/#{@user.prof_image}" %>">
+            </div>
+            <h1 class="px-3"><%= @user.name %></h1>
+        </div>
+        <div class="profile row py-5">
+            <div class="prof_text col-sm-7">
+                <p>プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。</p>
+            </div>
+            <div class="follow_and_postnumber col-sm-5 row">
+                <div class="col-4">
+                    <h3 class="text-center">投稿数</h3>
+                    <p class="text-center">100</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-center">フォロー</h3>
+                    <p class="text-center">100</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-center">フォロワ</h3>
+                    <p class="text-center">100</p>
+                </div>
+            </div>
+        </div>
+        <div class="post row pt-5">
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像1</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像2</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像3</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像4</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像5</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像6</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像7</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像8</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像9</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像10</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像11</a>
+            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像12</a>
+        </div>
+    </main>
+    
+</div>

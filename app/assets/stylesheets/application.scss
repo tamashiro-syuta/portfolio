@@ -1,0 +1,227 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *=require_self
+ *=require_tree
+ */
+
+@import "bootstrap";
+
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+#header .logo h1 {
+  font-size: 26px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #2c4964;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーー　　top.css　　ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+* {
+  box-sizing: border-box;
+  color: #3e1300;
+}
+body {
+  background-color: #f7f4f2;
+}
+
+main {
+  background-color: #d1cbc3;
+}
+
+/* ------------- モ ー ダ ル ---------------- */
+.login-modal-wrapper,
+.signup-modal-wrapper,
+.posts-modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+.modal1,
+.modal2 {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 600px;
+  height: auto;
+  text-align: center;
+}
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+#signup-form,
+#login-form {
+  width: 100%;
+}
+
+#signup-form h2,
+#login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input,
+#login-form input {
+  margin: auto;
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* ーーーーーーーーーー　ボ　タ　ン　ーーーーーーーーーー */
+.btn-orange {
+  background: none;
+  color: #3e1300;
+  border: #3e1300 solid 1px;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-orange:active:focus,
+.btn-orange:active:hover,
+.btn-orange:active.focus,
+.btn-orange.active,
+.btn-orange.active:focus,
+.btn-orange.active:hover,
+.btn-orange.active.focus,
+.open > .dropdown-toggle.btn-orange,
+.open > .dropdown-toggle.btn-orange:hover,
+.open > .dropdown-toggle.btn-orange:focus,
+.open > .dropdown-toggle.btn-orange.focus,
+.btn-orange.disabled:hover,
+.btn-orange[disabled]:hover,
+fieldset[disabled] .btn-orange:hover,
+.btn-orange.disabled:focus,
+.btn-orange[disabled]:focus,
+fieldset[disabled] .btn-orange:focus,
+.btn-orange.disabled.focus,
+.btn-orange[disabled].focus,
+fieldset[disabled] .btn-orange.focus {
+  background: #3e1300;
+  color: #f7f4f2;
+  border-color: #e65b20;
+}
+
+.btn-orange.outline {
+  border: 5px solid #e65b20;
+  color: #e65b20;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーー　　mypage.css　　ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+#header {
+  background-color: #e65b20;
+}
+
+.mypage_post a {
+  height: 200px;
+}
+
+.profile,
+.mypage_post {
+  padding: 15px;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーー　　timeline.css　　ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.post {
+  background-color: #d1cbc3;
+  width: fit-content;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 15px;
+}
+
+.user_name {
+  width: 70%;
+}
+
+.post-map {
+  height: auto;
+  padding-left: 30px;
+}
+
+.post-contents {
+  padding: 0;
+}
+
+.post-image {
+  border: 2px solid black;
+  height: 300px;
+}
+
+// --------------------------------------------------
+.top {
+  background: url("../../../public/back_image/top.jpg");
+}
+.nav-item {
+  margin-right: 15px;
+}
+
+#header {
+  background-color: #e65b20;
+  border-bottom: #3e1300 solid 2px;
+}
+
+.bg-mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}

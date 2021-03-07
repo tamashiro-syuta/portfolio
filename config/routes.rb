@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "users/create" => "users#create"
   get "logout" => "users#logout"
+  post "users/edit" => "users/edit"
 
   # ------------- p o s t s ----------
-  get "posts/show" => "posts#show"
+  get "posts/:id" => "posts#show"
   post "posts/create" => "posts#create"
 
 

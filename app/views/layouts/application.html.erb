@@ -31,6 +31,11 @@
                 </button>
               </li>
               <li class="nav-item">
+                <button type="button" class="btn btn-orange mx-auto d-block">
+                  <%= link_to("編集","/users/edit") %>
+                </button>
+              </li>
+              <li class="nav-item">
                 <button type="button" class="btn btn-orange mx-auto d-block" id="btn-post">投稿</button>
               </li>
             <% else %>
@@ -54,7 +59,7 @@
 
     <%# flashの表示 %>
     <% if flash[:notice] %>
-      <div class="flash py-3 mx-auto">
+      <div class="flash my-3 mx-auto">
         <h1 class="text-center"><%= flash[:notice] %></h1>
       </div>
     <% end %>
@@ -140,11 +145,11 @@
                     <%= form_tag("/posts/create", method: 'post', multipart: true, multiple: true) do %>
                         <div>
                           <label for="content">内容<br></label>
-                          <input name="content">
+                          <textarea name="content"></textarea>
                         </div>
                         <div>
-                          <label for="prof_image">プロフィール画像</label>
-                          <input type="file" name="prof_image" multiple="multiple" accept="image/*" onChange="change_img(this)" id="image_data">
+                          <label for="prof_image">画像</label>
+                          <input type="file" name="post_image" multiple="multiple" accept="image/*" onChange="change_img(this)" id="image_data">
                         </div>
                         <input type="submit" value="投稿">
                     <% end %>

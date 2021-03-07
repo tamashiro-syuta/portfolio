@@ -1,5 +1,5 @@
 <div>
-            
+       <%# ユーザーのマイページ  %>
     <main>
         <%= flash[:notice] %>
         <div class="name_and_icon py-5">
@@ -27,19 +27,24 @@
                 </div>
             </div>
         </div>
-        <div class="post row pt-5">
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像1</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像2</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像3</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像4</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像5</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像6</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像7</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像8</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像9</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像10</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-danger">投稿画像11</a>
-            <a class="col-md-4 col-sm-3 col-12 bg-primary">投稿画像12</a>
+        <%# 投稿部分 %>
+        <div class="post container row">
+            <div class="post-contents col-sm-7 col-12">
+                <div class="prof-name row py-3">
+                    <h3 class="float-left col-1">◯　</h3>
+                    <h3 class="col-4">ユーザー名</h3>
+                    <h3 class="col-2 offset-5">♡</h3>
+                </div>
+                <div class="post-image p-3 mb-3">
+                    <a>投稿画像が入ります。</a>
+                </div>
+                <div class="p-3">
+                    <p>投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</p>
+                </div>
+            </div>
+            <div class="post-map col-sm-5 col-12">
+                <a class="px-2 py-4">google mapを入れるとこ</a>
+            </div>
         </div>
     </main>
     

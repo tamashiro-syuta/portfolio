@@ -33,10 +33,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
 
+
   # middleというバージョンが作成され、画像を188 x 188ピクセルにリサイズ
   version :middle do
     process resize_to_fill: [188, 188]
   end
+  
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

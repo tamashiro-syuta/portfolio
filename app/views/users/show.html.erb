@@ -1,50 +1,58 @@
 <div>
        <%# ユーザーのマイページ  %>
     <main>
-        <%= flash[:notice] %>
-        <div class="name_and_icon py-5">
-            <div class="float-left ml-3">
-                <img src="<%= "/user_images/#{@user.prof_image}" %>">
-            </div>
-            <h1 class="px-3"><%= @user.name %></h1>
-        </div>
-        <div class="profile row py-5">
-            <div class="prof_text col-sm-7">
-                <p>プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。</p>
-            </div>
-            <div class="follow_and_postnumber col-sm-5 row">
-                <div class="col-4">
-                    <h3 class="text-center">投稿数</h3>
-                    <p class="text-center">100</p>
+        <div class="pre-prof">
+            <div class="name_and_icon py-5">
+                <div class="float-left ml-3">
+                    <img src="../../../public/user_images/<%= @user.prof_image %>">
                 </div>
-                <div class="col-4">
-                    <h3 class="text-center">フォロー</h3>
-                    <p class="text-center">100</p>
+                <h1 class="px-3"><%= @user.name %></h1>
+            </div>
+            <div class="profile row py-5">
+                <div class="prof_text col-sm-7">
+                    <p>プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。プロフィール用テキストです。</p>
                 </div>
-                <div class="col-4">
-                    <h3 class="text-center">フォロワ</h3>
-                    <p class="text-center">100</p>
+                <div class="follow_and_postnumber col-sm-5 row">
+                    <div class="col-4">
+                        <h3 class="text-center">投稿数</h3>
+                        <p class="text-center">100</p>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="text-center">フォロー</h3>
+                        <p class="text-center">100</p>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="text-center">フォロワ</h3>
+                        <p class="text-center">100</p>
+                    </div>
                 </div>
             </div>
         </div>
         <%# 投稿部分 %>
-        <div class="post container row">
-            <div class="post-contents col-sm-7 col-12">
-                <div class="prof-name row py-3">
-                    <h3 class="float-left col-1">◯　</h3>
-                    <h3 class="col-4">ユーザー名</h3>
-                    <h3 class="col-2 offset-5">♡</h3>
+        <div class="pre-post">
+            <%# ログインしてるユーザーの投稿を全て表示 %>
+            <% @current_user.posts.each do |post| %>
+                <div class="post row my-5 mx-2">
+                    <div class="post-contents col-sm-6 col-12">
+                        <div class="prof-name row py-3">
+                            <img src="../../../public/user_images/<%= @current_user.prof_image %>">
+                            <h3 class="col-4"><%= @current_user.name %></h3>
+                            <h3 class="col-2 offset-5">
+                                <a href="#" class="icon fas fa-edit"></a>
+                            </h3>
+                        </div>
+                        <div class="post-image p-3 mb-3">
+                            <a>投稿画像が入ります。</a>
+                        </div>
+                        <div class="p-3">
+                            <%= post.content %>
+                        </div>
+                    </div>
+                    <div class="post-map col-sm-6 col-12">
+                        <a class="px-2 py-4">google mapを入れるとこ</a>
+                    </div>
                 </div>
-                <div class="post-image p-3 mb-3">
-                    <a>投稿画像が入ります。</a>
-                </div>
-                <div class="p-3">
-                    <p>投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</p>
-                </div>
-            </div>
-            <div class="post-map col-sm-5 col-12">
-                <a class="px-2 py-4">google mapを入れるとこ</a>
-            </div>
+            <% end %>
         </div>
     </main>
     

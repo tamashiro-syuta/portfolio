@@ -24,11 +24,17 @@ document.addEventListener("turbolinks:load"
                 console.log("b");
             });
 
+            $("#btn-edit").click(function () {
+                $("#edit-modal").fadeIn();
+                console.log("b");
+            });
+
             $(".close-modal").click(function () {
                 $("#signup-modal").fadeOut();
                 $("#login-modal").fadeOut();
                 $("#search-modal").fadeOut();
                 $("#post-modal").fadeOut();
+                $("#edit-modal").fadeOut();
                 console.log("c");
             });
 

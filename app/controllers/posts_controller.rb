@@ -26,9 +26,9 @@ class PostsController < ApplicationController
       
     if @post.save
       flash[:notice] = "投稿を作成しました"
-      redirect_to("/posts/#{@post.id}") # タイムラインに飛ばす(今は仮に投稿詳細ページに飛ばしている)
+      redirect_to("/users/#{@current_user.id}") # タイムラインに飛ばす(今は仮に投稿詳細ページに飛ばしている)
     else
-      render("users/#{@current_user.id}") #　マイページ人飛ばす
+      render("home#top") #　マイページ人飛ばす
     end
   end
 

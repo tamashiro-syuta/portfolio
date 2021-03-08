@@ -52,7 +52,7 @@
   color: #3e1300;
 }
 body {
-  background-color: #f7f4f2;
+  background-color: #d1cbc3;
 }
 
 main {
@@ -191,6 +191,14 @@ fieldset[disabled] .btn-orange.focus {
   border-radius: 20px;
 }
 
+.pre-post,
+.pre-prof {
+  width: 100%;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .user_name {
   width: 70%;
 }
@@ -237,8 +245,16 @@ fieldset[disabled] .btn-orange.focus {
   border-radius: 20px;
 }
 
-.prof_image {
-  display: block;
-  height: 5%;
-  width: 5%;
+// -------------------- f o n t a w e s o m e ------------------------
+.fas:hover {
+  color: #e65b20;
+}
+
+.icon::before {
+  font-family: fontawesome;
+  display: inline-block;
+  margin-right: 0.5em;
+  font-family: fontawesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

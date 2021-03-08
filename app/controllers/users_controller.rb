@@ -59,4 +59,27 @@ class UsersController < ApplicationController
     redirect_to("/")
   end
 
+  def edit
+    @user = User.find_by(id: @current_user.id) #ログインしているユーザーの情報を格納
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.password = params[:password]
+    @user.from = params[:from]
+
+    if params[:prof_image] #もし画像があったら
+      @user.prof_image = "#{@user.id}.jpg" #ユーザーのイメージネームにわかりやすい名前で保存
+      image = params[:prof_image] #変数に画像のデータを入れる
+      File.binwrite("public/user_images/#{@user.prof_image}", image.read) #画像データを取得
+    end
+
+    if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      flash[:notice] = "ユーザー情報の編集に失敗しました。"
+      render("home/top")
+    end
+    
+  end
+
 end

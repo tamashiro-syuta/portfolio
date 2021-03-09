@@ -11,10 +11,7 @@ class PostsController < ApplicationController
 
   # 投稿作成
   def create
-    @images = params[:post_image]
-
-    binding.irb
-
+    
     @post = Post.new(
       user_id: @current_user.id,
       content: params[:content],
@@ -23,13 +20,26 @@ class PostsController < ApplicationController
       longitude: "longitude"
       # 住所も追加する（address,latitude,longitude）
     )
+    
+      @images = params[:post_image]
+      # Imagesテーブルに画像のパスを入れて、post_imageテーブルにさっきImagesに入れたデータのidを入れる。（postのidと一緒に入れる）
+      # これを画像の枚数分繰り返す
+      @images.each do |image|
+        tempfile = image.tempfile
+        @save_to = "public/post_images/#{image.filename}"
+        FIleUtils.mv(tempfile, save_to)
+        Image.new(
+          save_to: @save_to
+        )
+      end
       
-    if @post.save
+    if @post.save && @image.save
       flash[:notice] = "投稿を作成しました"
       redirect_to("/users/#{@current_user.id}") # タイムラインに飛ばす(今は仮に投稿詳細ページに飛ばしている)
     else
-      render("home#top") #　マイページ人飛ばす
+      render("home#top") #　マイページに飛ばす
     end
+
   end
 
 end

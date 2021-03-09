@@ -250,11 +250,6 @@ fieldset[disabled] .btn-orange.focus {
   color: #e65b20;
 }
 
-.icon::before {
-  font-family: fontawesome;
-  display: inline-block;
-  margin-right: 0.5em;
-  font-family: fontawesome;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+textarea {
+  width: 50%;
 }

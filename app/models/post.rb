@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-    has_many :photos, dependent: :destroy
+    has_many :images, dependent: :destroy
 
     # @user.post とやるとそのユーザーの投稿を全て取得
     def posts

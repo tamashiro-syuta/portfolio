@@ -1,0 +1,6 @@
+<%#  @comment.imagesで画像を取得できる %>
+<% if @comment.images.attached? %>
+    <% @comment.images.each do |image| %>
+        <%= image_tag image %> <br>
+    <% end %>
+<% end %>

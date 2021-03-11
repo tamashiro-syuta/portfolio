@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_124218) do
+ActiveRecord::Schema.define(version: 2021_03_11_103734) do
 
   create_table "follows", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,21 +23,6 @@ ActiveRecord::Schema.define(version: 2021_03_08_124218) do
     t.text "path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.string "image", null: false
-    t.integer "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_photos_on_post_id"
-  end
-
-  create_table "post_images", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "save_to"
-    t.integer "post"
   end
 
   create_table "posts", force: :cascade do |t|

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :comments
   get 'posts/index'
   # ----------- h o m e -------------
   get '/' => "home#top"

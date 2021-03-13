@@ -42,9 +42,14 @@
                             </div>
                         </div>
                         <div class="post-image p-3 mb-3">
-                            <a>投稿画像が入ります。</a>
+                            <% if post.images %>
+                                <%# binding.irb %>
+                                <% post.images.each do |image| %>
+                                    <% binding.irb %>
+                                    <%= image_tag(image) %> <br>
+                                <% end %>
+                            <% end %>
                         </div>
-                        <div class="p-3">
                             <%= post.content %>
                         </div>
                     </div>
